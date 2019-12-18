@@ -1,0 +1,114 @@
+\hypertarget{jpg__codec_8h}{}\doxysection{src/jpg/jpg\+\_\+codec.h File Reference}
+\label{jpg__codec_8h}\index{src/jpg/jpg\_codec.h@{src/jpg/jpg\_codec.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6}{ret\+\_\+type\+\_\+t}} \{ \mbox{\hyperlink{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6a157931f1bc4f0590eb0bd3ad6bbdd7d6}{C\+O\+D\+E\+C\+\_\+\+OK}} = 0x00, 
+\mbox{\hyperlink{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6a1608e8dd979db7ded9b6abe83f974662}{C\+O\+D\+E\+C\+\_\+\+B\+U\+SY}} = 0x10, 
+\mbox{\hyperlink{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6adf0fb4a049f4cef9da54eba57efa75b4}{C\+O\+D\+E\+C\+\_\+\+E\+RR}} = 0x\+FF
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6}{ret\+\_\+type\+\_\+t}} \mbox{\hyperlink{jpg__codec_8h_a14b14ce313ec51ec154226babc09088d}{trust\+\_\+jpg\+\_\+file}} (F\+I\+LE $\ast$f\+\_\+in)
+\begin{DoxyCompactList}\small\item\em send pointer to open jpg-\/file to library \end{DoxyCompactList}\item 
+\mbox{\hyperlink{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6}{ret\+\_\+type\+\_\+t}} \mbox{\hyperlink{jpg__codec_8h_aa599cb72a7bb427874df46483654a351}{start\+\_\+jpg\+\_\+decoding}} (void)
+\begin{DoxyCompactList}\small\item\em start process of decoding of jpg file \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{jpg__codec_8h_a46f08c6c90405c8ec65c2ee8373e5827}{get\+\_\+output\+\_\+buffer\+\_\+size}} (void)
+\begin{DoxyCompactList}\small\item\em Return size of intire buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6}{ret\+\_\+type\+\_\+t}} \mbox{\hyperlink{jpg__codec_8h_ac9a2ac13bf4c65d55ab4d3905dbea027}{copy\+\_\+output\+\_\+buffer}} (uint8\+\_\+t $\ast$buffer, uint64\+\_\+t buffer\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Copy entire raw pixels buffer to pointer buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6}\label{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6}} 
+\index{jpg\_codec.h@{jpg\_codec.h}!ret\_type\_t@{ret\_type\_t}}
+\index{ret\_type\_t@{ret\_type\_t}!jpg\_codec.h@{jpg\_codec.h}}
+\doxysubsubsection{\texorpdfstring{ret\_type\_t}{ret\_type\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6}{ret\+\_\+type\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CODEC\_OK@{CODEC\_OK}!jpg\_codec.h@{jpg\_codec.h}}\index{jpg\_codec.h@{jpg\_codec.h}!CODEC\_OK@{CODEC\_OK}}}\mbox{\Hypertarget{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6a157931f1bc4f0590eb0bd3ad6bbdd7d6}\label{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6a157931f1bc4f0590eb0bd3ad6bbdd7d6}} 
+C\+O\+D\+E\+C\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CODEC\_BUSY@{CODEC\_BUSY}!jpg\_codec.h@{jpg\_codec.h}}\index{jpg\_codec.h@{jpg\_codec.h}!CODEC\_BUSY@{CODEC\_BUSY}}}\mbox{\Hypertarget{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6a1608e8dd979db7ded9b6abe83f974662}\label{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6a1608e8dd979db7ded9b6abe83f974662}} 
+C\+O\+D\+E\+C\+\_\+\+B\+U\+SY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CODEC\_ERR@{CODEC\_ERR}!jpg\_codec.h@{jpg\_codec.h}}\index{jpg\_codec.h@{jpg\_codec.h}!CODEC\_ERR@{CODEC\_ERR}}}\mbox{\Hypertarget{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6adf0fb4a049f4cef9da54eba57efa75b4}\label{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6adf0fb4a049f4cef9da54eba57efa75b4}} 
+C\+O\+D\+E\+C\+\_\+\+E\+RR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{jpg__codec_8h_ac9a2ac13bf4c65d55ab4d3905dbea027}\label{jpg__codec_8h_ac9a2ac13bf4c65d55ab4d3905dbea027}} 
+\index{jpg\_codec.h@{jpg\_codec.h}!copy\_output\_buffer@{copy\_output\_buffer}}
+\index{copy\_output\_buffer@{copy\_output\_buffer}!jpg\_codec.h@{jpg\_codec.h}}
+\doxysubsubsection{\texorpdfstring{copy\_output\_buffer()}{copy\_output\_buffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6}{ret\+\_\+type\+\_\+t}} copy\+\_\+output\+\_\+buffer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buffer,  }\item[{uint64\+\_\+t}]{buffer\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Copy entire raw pixels buffer to pointer buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to buffer \\
+\hline
+{\em size} & of buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+state of copy 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jpg__codec_8h_a46f08c6c90405c8ec65c2ee8373e5827}\label{jpg__codec_8h_a46f08c6c90405c8ec65c2ee8373e5827}} 
+\index{jpg\_codec.h@{jpg\_codec.h}!get\_output\_buffer\_size@{get\_output\_buffer\_size}}
+\index{get\_output\_buffer\_size@{get\_output\_buffer\_size}!jpg\_codec.h@{jpg\_codec.h}}
+\doxysubsubsection{\texorpdfstring{get\_output\_buffer\_size()}{get\_output\_buffer\_size()}}
+{\footnotesize\ttfamily uint64\+\_\+t get\+\_\+output\+\_\+buffer\+\_\+size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Return size of intire buffer. 
+
+\begin{DoxyReturn}{Returns}
+size of buffer with raw pixels 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jpg__codec_8h_aa599cb72a7bb427874df46483654a351}\label{jpg__codec_8h_aa599cb72a7bb427874df46483654a351}} 
+\index{jpg\_codec.h@{jpg\_codec.h}!start\_jpg\_decoding@{start\_jpg\_decoding}}
+\index{start\_jpg\_decoding@{start\_jpg\_decoding}!jpg\_codec.h@{jpg\_codec.h}}
+\doxysubsubsection{\texorpdfstring{start\_jpg\_decoding()}{start\_jpg\_decoding()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6}{ret\+\_\+type\+\_\+t}} start\+\_\+jpg\+\_\+decoding (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+start process of decoding of jpg file 
+
+\begin{DoxyReturn}{Returns}
+state result of decoding 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jpg__codec_8h_a14b14ce313ec51ec154226babc09088d}\label{jpg__codec_8h_a14b14ce313ec51ec154226babc09088d}} 
+\index{jpg\_codec.h@{jpg\_codec.h}!trust\_jpg\_file@{trust\_jpg\_file}}
+\index{trust\_jpg\_file@{trust\_jpg\_file}!jpg\_codec.h@{jpg\_codec.h}}
+\doxysubsubsection{\texorpdfstring{trust\_jpg\_file()}{trust\_jpg\_file()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jpg__codec_8h_a478c38b1b81ffd5422bd2ad3b42c6ba6}{ret\+\_\+type\+\_\+t}} trust\+\_\+jpg\+\_\+file (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+send pointer to open jpg-\/file to library 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+state of result 
+\end{DoxyReturn}

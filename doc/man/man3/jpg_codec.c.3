@@ -1,0 +1,127 @@
+.TH "src/jpg/jpg_codec.c" 3 "Sat Dec 14 2019" "Codec" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/jpg/jpg_codec.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'jpg_codec\&.h'\fP
+.br
+\fC#include 'jpg_encoder\&.h'\fP
+.br
+\fC#include 'jpg_decoder\&.h'\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBjpg_header_t\fP"
+.br
+.ti -1c
+.RI "struct \fBpixel_rgb_t\fP"
+.br
+.ti -1c
+.RI "struct \fBpixel_YCbCr_t\fP"
+.br
+.ti -1c
+.RI "struct \fBpixel_rgb_buffer_t\fP"
+.br
+.ti -1c
+.RI "struct \fBpixel_YCbCr_buffer_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBret_type_t\fP \fBtrust_jpg_file\fP (FILE *f_in)"
+.br
+.RI "send pointer to open jpg-file to library "
+.ti -1c
+.RI "uint64_t \fBget_output_buffer_size\fP (void)"
+.br
+.RI "Return size of intire buffer\&. "
+.ti -1c
+.RI "\fBret_type_t\fP \fBcopy_output_buffer\fP (uint8_t *buffer, uint64_t buffer_size)"
+.br
+.RI "Copy entire raw pixels buffer to pointer buffer\&. "
+.ti -1c
+.RI "\fBret_type_t\fP \fBstart_jpg_decoding\fP (void)"
+.br
+.RI "start process of decoding of jpg file "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBret_type_t\fP copy_output_buffer (uint8_t * buffer, uint64_t buffer_size)"
+
+.PP
+Copy entire raw pixels buffer to pointer buffer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpointer\fP to buffer 
+.br
+\fIsize\fP of buffer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+state of copy 
+.RE
+.PP
+
+.SS "uint64_t get_output_buffer_size (void)"
+
+.PP
+Return size of intire buffer\&. 
+.PP
+\fBReturns\fP
+.RS 4
+size of buffer with raw pixels 
+.RE
+.PP
+
+.SS "\fBret_type_t\fP start_jpg_decoding (void)"
+
+.PP
+start process of decoding of jpg file 
+.PP
+\fBReturns\fP
+.RS 4
+state result of decoding 
+.RE
+.PP
+
+.SS "\fBret_type_t\fP trust_jpg_file (FILE * f_in)"
+
+.PP
+send pointer to open jpg-file to library 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpointer\fP to file 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+state of result 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "FILE* enire_file"
+
+.SS "\fBjpg_header_t\fP header"
+
+.SS "\fBpixel_rgb_buffer_t\fP rgb_buffer"
+
+.SS "\fBpixel_YCbCr_buffer_t\fP YCbCr_buffer"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Codec from the source code\&.
