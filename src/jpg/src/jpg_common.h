@@ -68,7 +68,7 @@ typedef struct
 
 typedef struct
 {
-    FILE* enire_file;
+    FILE *enire_file;
 
     jpg_header_t header;
 

@@ -14,16 +14,7 @@
 #include <string.h>
 
 
-static struct
-{
-    FILE* enire_file;
-
-    jpg_header_t header;
-
-    pixel_rgb_buffer_t rgb_buffer;
-    pixel_YCbCr_buffer_t YCbCr_buffer;
-
-}jpg_info;
+static jpg_info_t jpg_info;
 
 /*!
  * \brief send pointer to open jpg-file to library
@@ -78,8 +69,23 @@ ret_type_t  copy_output_buffer(uint8_t* buffer, uint64_t buffer_size)
  * \brief start process of decoding of jpg file
  * \return state result of decoding
  */
-ret_type_t  start_jpg_decoding(void)
+ret_type_t  jpg_decode(void)
 {
+
+    if (!jpg_info.enire_file)
+    {
+        return CODEC_ERR;
+    }
+
+    uint16_t b_file_signature = (0xFFFF)&&(uint16_t)
+                               ((fgetc(jpg_info.enire_file)<<8) &&
+                                (fgetc(jpg_info.enire_file)));
+
+    if (b_file_signature != 0xFFD8)
+    {
+        return CODEC_ERR;
+    }
+
 
 
     return CODEC_OK;
